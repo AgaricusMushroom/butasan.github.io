@@ -3,24 +3,27 @@
 <head>
 <title>レンタルチームID抽出</title>
 </head>
-<body>
+<body onLoad="defaultCheck()">
 <script>
 	var teamId = [
-	"0000 0001 0RN8 YV",
-	"0000 0002 CXHT R8",
-	"0000 0007 LYKW 53",
-	"0000 0006 PKM9 60",
-	"0000 0006 51HD 87",
-	"0000 0004 N3P0 L2",
-	"0000 0008 T4XN K8",
-	"0000 0007 NXW9 C8",
-	"0000 0004 7K5W J2",
-	"0000 0001 MF6T 4M",
-	"0000 0006 15D4 HR",
-	"0000 0008 P4W4 R7",
-	"0000 0003 N09L 4V",
-	"0000 0000 XV5X 8M",
 	"0000 0001 0RN8 YV"
+	,"0000 0002 CXHT R8"
+	,"0000 0007 LYKW 53"
+	,"0000 0006 PKM9 60"
+	,"0000 0006 51HD 87"
+	,"0000 0004 N3P0 L2"
+	,"0000 0008 T4XN K8"
+	,"0000 0007 NXW9 C8"
+	,"0000 0004 7K5W J2"
+	,"0000 0001 MF6T 4M"
+	,"0000 0006 15D4 HR"
+	,"0000 0008 P4W4 R7"
+	,"0000 0003 N09L 4V"
+	,"0000 0000 XV5X 8M"
+	,"0000 0007 1G8N 8Y"
+	,"0000 0004 F7L1 3M"
+	,"0000 0006 7Y28 6R"
+	,"0000 0002 JKPD B4"
 	];
 	
 	function randomId(){
@@ -32,11 +35,31 @@
 	function getRandomArbitrary(min, max) {
 		return Math.floor(Math.random() * (max - min) + min);
 	}
+	
+	function existsSameValue(a){
+		var s = new Set(a);
+		return s.length != a.length;
+	}
+	
+	function defaultCheck(){
+		var arr = teamId.filter(function (x, i, self) {
+            return self.indexOf(x) !== self.lastIndexOf(x);
+        });
+        if(arr.length != 0){
+        	var text ="重複エラー！";
+        	for(var i = 0; i < arr.length; i+=2){
+        		text += "\n" + arr[i];
+        	}
+        	alert(text);
+        }
+		document.getElementById("teamCount").innerHTML = "現在のチームID数：" +teamId.length;
+	}
 </script>
 <h1>ぶひ</h1>
 <p><button id="random" onClick="randomId()">ポチるぶう</button></p>
 <form>
 <input type="text" name="id" id="team" value="ぶたさんチームのID" readonly>
+<p><div id="teamCount"></div></p>
 </form>
 </body>
 </html>
