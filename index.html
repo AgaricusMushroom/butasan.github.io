@@ -27,14 +27,33 @@
 	,"0000 0002 8VKD TK"
 	,"0000 0004 1PHX K6"
 	,"0000 0002 9TRB 0N"
-	,"0000 0006 CV14 GN"
-	,"0000 0006 XFTR JR"
-	,"0000 0004 T0X5 39"
+	,"0000 0006 04V9 RT"
+	,"0000 0000 K4HL DH"
+	,"0000 0002 3292 R6"
+	,"0000 0000 5DN8 31"
+	,"0000 0003 G23B R0"
+	,"0000 0004 0M8P P6"
+	,"0000 0007 6B9N PF"
+	,"0000 0007 J3NG 4H"
+	];
+	
+	var doubleTeamId = [
+	"0000 0003 NRRN JR"
+	,"0000 0003 XMBY YV"
+	,"0000 0005 DK2H DJ"
+	,"0000 0005 HFV2 1C"
+	,"0000 0002 311L TV"
 	];
 	
 	function randomId(){
 		var i = getRandomArbitrary(0, teamId.length);
 		var id = teamId[i];
+		document.getElementById("team").value = id;
+	}
+	
+	function randomDoubleId(){
+		var i = getRandomArbitrary(0, doubleTeamId.length);
+		var id = doubleTeamId[i];
 		document.getElementById("team").value = id;
 	}
 	
@@ -52,17 +71,28 @@
             return self.indexOf(x) !== self.lastIndexOf(x);
         });
         if(arr.length != 0){
-        	var text ="重複エラー！";
+        	var text ="シングル重複エラー！";
         	for(var i = 0; i < arr.length; i+=2){
         		text += "\n" + arr[i];
         	}
         	alert(text);
         }
-		document.getElementById("teamCount").innerHTML = "現在のチームID数：" +teamId.length;
+        arr = doubleTeamId.filter(function (x, i, self) {
+            return self.indexOf(x) !== self.lastIndexOf(x);
+        });
+        if(arr.length != 0){
+        	var text ="ダブル重複エラー！";
+        	for(var i = 0; i < arr.length; i+=2){
+        		text += "\n" + arr[i];
+        	}
+        	alert(text);
+        }
+		document.getElementById("teamCount").innerHTML = "<h2>現在のチームID数</h2><p>シングルチーム：" +teamId.length+ "</p><p>ダブルチーム：" +doubleTeamId.length+ "</p>";
 	}
 </script>
 <h1>ぶひ</h1>
-<p><button id="random" onClick="randomId()">ポチるぶう</button></p>
+<p><button id="random" onClick="randomId()">シングルチームガチャぶう</button></p>
+<p><button id="random" onClick="randomDoubleId()">ダブルチームガチャぶう</button></p>
 <form>
 <input type="text" name="id" id="team" value="ぶたさんチームのID" readonly>
 <p><div id="teamCount"></div></p>
