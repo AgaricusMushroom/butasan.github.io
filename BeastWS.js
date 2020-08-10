@@ -1082,6 +1082,17 @@ function defaultArray(type){
     tuika:""
   });
   WSList.push({
+    shuzoku:"リンクス",
+    skill:"怒髪",
+    charge:1,
+    shubetu:"強化",
+    zokusei:"不明",
+    renkei1:"",
+    renkei2:"",
+    flg:true,
+    tuika:"攻撃力アップ"
+  });
+  WSList.push({
     shuzoku:"レディバグ",
     skill:"サドンランジ",
     charge:1,
