@@ -1056,7 +1056,6 @@ function defaultArray(type){
     zokusei:"風",
     renkei1:"",
     renkei2:"",
-    flg:true,
     tuika:"静寂"
   });
   WSList.push({
@@ -1067,7 +1066,6 @@ function defaultArray(type){
     zokusei:"氷",
     renkei1:"",
     renkei2:"",
-    flg:true,
     tuika:"麻痺"
   });
   WSList.push({
@@ -1078,7 +1076,6 @@ function defaultArray(type){
     zokusei:"雷",
     renkei1:"",
     renkei2:"",
-    flg:true,
     tuika:""
   });
   WSList.push({
@@ -1089,7 +1086,6 @@ function defaultArray(type){
     zokusei:"不明",
     renkei1:"",
     renkei2:"",
-    flg:true,
     tuika:"攻撃力アップ"
   });
   WSList.push({
