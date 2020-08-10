@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ペット連携検索</title>
+	<style>
+	#WStable {
+	   border-collapse: collapse;
+	   border: 2px solid blue;
+	}
+	#WStable td{
+	   border-width: 1px 0px;
+	   border-color: blue;
+	   border-style: solid;
+	   padding: 0.3em;
+	}
+	</style>
+</head>
+<body onLoad="defaultArray(1)">
+	<script type="text/javascript" src="BeastWS.js"></script>
+	<h1 style="text-align:center">ペット連携検索</h1>
+	<a href="petwssearch.html">ペットWS検索へ</a>
+	<h2>検索</h2>
+	<form name="search_form" onChange="createTable(1)">
+		<table id='searchTable'>
+			<tr>
+				<th>連携</th>
+			</tr>
+			<tr>
+				<td>
+					<select id="renkei" name="renkei">
+						<option value=""></option>
+						<option value="溶解">溶解</option>
+						<option value="硬化">硬化</option>
+						<option value="炸裂">炸裂</option>
+						<option value="切断">切断</option>
+						<option value="衝撃">衝撃</option>
+						<option value="振動">振動</option>
+						<option value="貫通">貫通</option>
+						<option value="収縮">収縮</option>
+						<option value="核熱">核熱</option>
+						<option value="重力">重力</option>
+						<option value="分解">分解</option>
+						<option value="湾曲">湾曲</option>
+						<option value="光">光</option>
+						<option value="闇">闇</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	<br>
+	<label><input type="checkbox" id="onaji" name="onaji">同一ペットの連携のみ</label><br>
+	<label><input type="checkbox" id="IL" name="IL" checked="checked">ItemLevel119未満のペットを含まない</label>
+	</form>
+	<br>
+	
+	<table id='WStable'>
+	</table>
+</body>
+</html>
