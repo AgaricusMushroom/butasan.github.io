@@ -1,6 +1,6 @@
-﻿var WSList;
+var WSList;
 
-function defaultArray(type){
+function defaultArray(){
   WSList = new Array();
   WSList.push({
     shuzoku:"アクエフ",
@@ -21,39 +21,6 @@ function defaultArray(type){
     renkei1:"",
     renkei2:"",
     tuika:"悪疫、暗闇、魔法防御力ダウン"
-  });
-  WSList.push({
-    shuzoku:"アダマンタス",
-    skill:"トータスストンプ",
-    charge:1,
-    shubetu:"物理",
-    zokusei:"打",
-    renkei1:"溶解",
-    renkei2:"",
-    flg:true,
-    tuika:"防御力ダウン"
-  });
-  WSList.push({
-    shuzoku:"アダマンタス",
-    skill:"甲羅強化",
-    charge:1,
-    shubetu:"強化",
-    zokusei:"",
-    renkei1:"",
-    renkei2:"",
-    flg:true,
-    tuika:"防御力アップ"
-  });
-  WSList.push({
-    shuzoku:"アダマンタス",
-    skill:"アクアブレス",
-    charge:3,
-    shubetu:"魔法",
-    zokusei:"水",
-    renkei1:"",
-    renkei2:"",
-    flg:true,
-    tuika:""
   });
   WSList.push({
     shuzoku:"アプカル",
@@ -323,7 +290,7 @@ function defaultArray(type){
     zokusei:"斬",
     renkei1:"切断",
     renkei2:"",
-    tuika:"※クラブのみ"
+    tuika:""
   });
   WSList.push({
     shuzoku:"クラブ",
@@ -333,7 +300,7 @@ function defaultArray(type){
     zokusei:"水",
     renkei1:"",
     renkei2:"",
-    tuika:"STRダウン　※クラブのみ"
+    tuika:"STRダウン"
   });
   WSList.push({
     shuzoku:"クラブ",
@@ -366,46 +333,6 @@ function defaultArray(type){
     tuika:"シェル"
   });
   WSList.push({
-    shuzoku:"クラブ",
-    skill:"メガシザース",
-    charge:2,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"重力",
-    renkei2:"切断",
-    tuika:"※ポータークラブのみ"
-  });
-  WSList.push({
-    shuzoku:"クラブ",
-    skill:"ベノムシャワー",
-    charge:2,
-    shubetu:"魔法",
-    zokusei:"水",
-    renkei1:"",
-    renkei2:"",
-    tuika:"毒、防御力ダウン　※ポータークラブのみ"
-  });
-  WSList.push({
-    shuzoku:"鍬形",
-    skill:"ディスエンバウエル",
-    charge:1,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"衝撃",
-    renkei2:"",
-    tuika:"命中率ダウン(命中-50)"
-  });
-  WSList.push({
-    shuzoku:"鍬形",
-    skill:"E.サルヴォ",
-    charge:2,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"核熱",
-    renkei2:"衝撃",
-    tuika:"スタン"
-  });
-  WSList.push({
     shuzoku:"剣虎",
     skill:"レイザーファング",
     charge:1,
@@ -434,26 +361,6 @@ function defaultArray(type){
     renkei1:"",
     renkei2:"",
     tuika:"麻痺 30s - 2m"
-  });
-  WSList.push({
-    shuzoku:"剣虎",
-    skill:"クロススラッシュ",
-    charge:2,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"湾曲",
-    renkei2:"炸裂",
-    tuika:"ディスペル"
-  });
-  WSList.push({
-    shuzoku:"剣虎",
-    skill:"プレダトリグレア",
-    charge:2,
-    shubetu:"弱体",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"スタン"
   });
   WSList.push({
     shuzoku:"甲虫",
@@ -506,16 +413,6 @@ function defaultArray(type){
     tuika:"回避率ダウン(回避-40) 3m"
   });
   WSList.push({
-    shuzoku:"甲虫",
-    skill:"ライノレッカー",
-    charge:2,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"核熱",
-    renkei2:"貫通",
-    tuika:"※黄甲虫のみ"
-  });
-  WSList.push({
     shuzoku:"コリブリ",
     skill:"ペッキングフラリー",
     charge:1,
@@ -561,8 +458,8 @@ function defaultArray(type){
     charge:1,
     shubetu:"物理",
     zokusei:"打",
-    renkei1:"衝撃",
-    renkei2:"",
+    renkei1:"",
+    renkei2:"衝撃",
     tuika:"スタン"
   });
   WSList.push({
@@ -624,36 +521,6 @@ function defaultArray(type){
     renkei1:"",
     renkei2:"",
     tuika:"スロウ"
-  });
-  WSList.push({
-    shuzoku:"スライム",
-    skill:"フルイドスルー",
-    charge:1,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"振動",
-    renkei2:"",
-    tuika:""
-  });
-  WSList.push({
-    shuzoku:"スライム",
-    skill:"フルイドスプレッド",
-    charge:2,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"分解",
-    renkei2:"貫通",
-    tuika:""
-  });
-  WSList.push({
-    shuzoku:"スライム",
-    skill:"消化",
-    charge:1,
-    shubetu:"魔法",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"HP吸収"
   });
   WSList.push({
     shuzoku:"スラッグ",
@@ -809,7 +676,7 @@ function defaultArray(type){
     shuzoku:"トカゲ",
     skill:"体液分泌",
     charge:1,
-    shubetu:"強化",
+    shubetu:"教科",
     zokusei:"",
     renkei1:"",
     renkei2:"",
@@ -824,66 +691,6 @@ function defaultArray(type){
     renkei1:"",
     renkei2:"",
     tuika:"回避率ダウン(回避-40) 3m"
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"バックヒール",
-    charge:1,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"振動",
-    renkei2:"",
-    tuika:""
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"チョークブレス",
-    charge:1,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"麻痺、静寂"
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"ファンタッド",
-    charge:2,
-    shubetu:"強化",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"攻撃力アップ"
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"フーフボレー",
-    charge:3,
-    shubetu:"物理",
-    zokusei:"不明",
-    renkei1:"光",
-    renkei2:"分解",
-    tuika:""
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"ニヒリティソング",
-    charge:1,
-    shubetu:"弱体",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"ディスペル"
-  });
-  WSList.push({
-    shuzoku:"ヒッポグリフ",
-    skill:"ジェタチュラ",
-    charge:3,
-    shubetu:"弱体",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"テラー"
   });
   WSList.push({
     shuzoku:"フライ",
@@ -914,39 +721,6 @@ function defaultArray(type){
     renkei1:"",
     renkei2:"",
     tuika:"毒(-47HP/3sec) 4m30s"
-  });
-  WSList.push({
-    shuzoku:"フライトラップ",
-    skill:"サペリフィック",
-    charge:1,
-    shubetu:"弱体",
-    zokusei:"闇",
-    renkei1:"",
-    renkei2:"",
-    flg:true,
-    tuika:"睡眠"
-  });
-  WSList.push({
-    shuzoku:"フライトラップ",
-    skill:"パルジィパレン",
-    charge:1,
-    shubetu:"弱体",
-    zokusei:"氷",
-    renkei1:"",
-    renkei2:"",
-    flg:true,
-    tuika:"麻痺"
-  });
-  WSList.push({
-    shuzoku:"フライトラップ",
-    skill:"グロオーサケス",
-    charge:2,
-    shubetu:"弱体",
-    zokusei:"土",
-    renkei1:"",
-    renkei2:"",
-    flg:true,
-    tuika:"スロウ(スロウ+35%)"
   });
   WSList.push({
     shuzoku:"マンドラゴラ",
@@ -990,7 +764,7 @@ function defaultArray(type){
   });
   WSList.push({
     shuzoku:"モスキート",
-    skill:"グルームスプレー",
+    skill:"グループスプレー",
     charge:2,
     shubetu:"魔法",
     zokusei:"闇",
@@ -1049,46 +823,6 @@ function defaultArray(type){
     tuika:"スロウ(スロウ+25) 2m - 5m"
   });
   WSList.push({
-    shuzoku:"リンクス",
-    skill:"カオティックアイ",
-    charge:1,
-    shubetu:"弱体",
-    zokusei:"風",
-    renkei1:"",
-    renkei2:"",
-    tuika:"静寂"
-  });
-  WSList.push({
-    shuzoku:"リンクス",
-    skill:"ブラスター",
-    charge:2,
-    shubetu:"弱体",
-    zokusei:"氷",
-    renkei1:"",
-    renkei2:"",
-    tuika:"麻痺"
-  });
-  WSList.push({
-    shuzoku:"リンクス",
-    skill:"チャージドホイスカー",
-    charge:2,
-    shubetu:"魔法",
-    zokusei:"雷",
-    renkei1:"",
-    renkei2:"",
-    tuika:""
-  });
-  WSList.push({
-    shuzoku:"リンクス",
-    skill:"怒髪",
-    charge:1,
-    shubetu:"強化",
-    zokusei:"不明",
-    renkei1:"",
-    renkei2:"",
-    tuika:"攻撃力アップ"
-  });
-  WSList.push({
     shuzoku:"レディバグ",
     skill:"サドンランジ",
     charge:1,
@@ -1118,78 +852,34 @@ function defaultArray(type){
     renkei2:"",
     tuika:"攻撃力ダウン(攻-15%) 30s - 1m"
   });
-  if(!type)createTable();
+  createTable();
 }
 
-function createTable(hyoji){
-  var open = hyoji || 0;
+function createTable(){
   var table = document.getElementById("WStable");
-  if(open == 0){
-    for(var i = table.rows.length -1; i > 0; i--){
-      table.deleteRow(-1);
-    }
-    var list = createArray();
-    list.forEach(function(ws){
-      var tr = table.insertRow(-1);
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.shuzoku;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.skill;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.charge;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.shubetu;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.zokusei;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.renkei1;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.renkei2;
-      var td = tr.insertCell(-1);
-      td.innerHTML = ws.tuika;
-    });
-  } else {
-    for(var i = table.rows.length -1; i >= 0; i--){
-      table.deleteRow(-1);
-    }
-    var renkei = document.search_form.renkei.options[document.search_form.renkei.selectedIndex].value;
-    var list = createArray2();
-    var onaji = document.forms.search_form.onaji.checked;
-    var pets = new Array();
-    var renkeiList = new Array();
-    if(onaji){
-      var hozon = "";
-      for(var i = 0; i < list.length; i++){
-        if(hozon == ""){
-          hozon = list[i].shuzoku;
-          pets.push(list[i]);
-        } else if(list[i].shuzoku == hozon){
-          pets.push(list[i]);
-        } else {
-          Array.prototype.push.apply(renkeiList, createRenkei(pets, renkei));
-          pets = new Array();
-          hozon = list[i].shuzoku;
-          pets.push(list[i]);
-        }
-      }
-      Array.prototype.push.apply(renkeiList, createRenkei(pets, renkei));
-    } else {
-      renkeiList = createRenkei(list, renkei);
-    }
-    renkeiList.forEach(function(renkei){
-      var tr = table.insertRow(-1);
-      var td = tr.insertCell(-1);
-      td.innerHTML = renkei.action1;
-      var td = tr.insertCell(-1);
-      td.innerHTML = "(" + renkei.pet1 + ")";
-      var td = tr.insertCell(-1);
-      td.innerHTML = "→";
-      var td = tr.insertCell(-1);
-      td.innerHTML = renkei.action2;
-      var td = tr.insertCell(-1);
-      td.innerHTML = "(" + renkei.pet2 + ")";
-    });
+  for(var i = table.rows.length -1; i > 0; i--){
+    table.deleteRow(-1);
   }
+  var list = createArray();
+  list.forEach(function(ws){
+    var tr = table.insertRow(-1);
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.shuzoku;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.skill;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.charge;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.shubetu;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.zokusei;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.renkei1;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.renkei2;
+    var td = tr.insertCell(-1);
+    td.innerHTML = ws.tuika;
+  });
 }
 
 
@@ -1208,24 +898,15 @@ function createArray(){
   var shubetu = document.search_form.shubetu;
   var zokusei = document.search_form.zokusei;
   var renkei = document.search_form.renkei;
-  var il = document.forms.search_form.IL;
   var search = new Array();
   search.push(shuzoku.options[shuzoku.selectedIndex].value);
   search.push(skill.value);
   search.push(shubetu.options[shubetu.selectedIndex].value);
   search.push(zokusei.options[zokusei.selectedIndex].value);
   search.push(renkei.options[renkei.selectedIndex].value);
-  search.push(il.checked);
-  for(var i = 0; i < 6; i++){
+  for(var i = 0; i < 5; i++){
     newList = arrayFilter(newList, i, search[i]);
   }
-  return newList;
-}
-
-function createArray2(){
-  var newList = WSList;
-  var il = document.forms.search_form.IL.checked;
-  newList = arrayFilter(newList, 5, il);
   return newList;
 }
 
@@ -1253,9 +934,7 @@ function arrayFilter(list, type, keyword){
           key2 = object.renkei2;
           break;
       }
-      if(type == 5){
-        if(!object.flg || (keyword =- false))return true;
-      } else if(key.indexOf(keyword) >= 0 || key2.indexOf(keyword) >= 0){
+      if(key.indexOf(keyword) >= 0 || key2.indexOf(keyword) >= 0){
         return true;
       }
     });
@@ -1263,365 +942,4 @@ function arrayFilter(list, type, keyword){
     return list;
   }
   return workList;
-}
-
-function createRenkei(list, goal){
-  var route = goalRenkei(goal);
-  var renkeiList = new Array();
-  list.forEach(function(object){
-    var work = {
-      pet1:null,
-      action1:null,
-      renkei1:null,
-      pet2:null,
-      action2:null,
-      renkei2:null,
-      goal:goal
-    };
-    for(var i = 0; i < route.length; i++){
-      if(object.renkei1 == route[i].action2){
-        work.pet2 = object.shuzoku;
-        work.action2 = object.skill;
-        work.renkei2 = object.renkei1;
-        list.forEach(function(object2){
-          var flg = false;
-          if(object2.renkei1 == route[i].action1){
-            work.pet1 = object2.shuzoku;
-            work.action1 = object2.skill;
-            work.renkei1 = object2.renkei1;
-            renkeiList.push(JSON.parse(JSON.stringify(work)));
-            flg = true;
-          }
-          if(flg == false && object2.renkei2 == route[i].action1){
-            work.pet1 = object2.shuzoku;
-            work.action1 = object2.skill;
-            work.renkei1 = object2.renkei2;
-            renkeiList.push(JSON.parse(JSON.stringify(work)));
-            flg = true;
-          }
-        })
-      }
-      if(object.renkei2 == route[i].action2){
-        work.pet2 = object.shuzoku;
-        work.action2 = object.skill;
-        work.renkei2 = object.renkei2;
-        list.forEach(function(object2){
-          var flg = false;
-          if(object2.renkei1 == route[i].action1){
-            work.pet1 = object2.shuzoku;
-            work.action1 = object2.skill;
-            work.renkei1 = object2.renkei1;
-            renkeiList.push(JSON.parse(JSON.stringify(work)));
-            flg = true;
-          }
-          if(flg == false && object2.renkei2 == route[i].action1){
-            work.pet1 = object2.shuzoku;
-            work.action1 = object2.skill;
-            work.renkei1 = object2.renkei2;
-            renkeiList.push(JSON.parse(JSON.stringify(work)));
-            flg = true;
-          }
-        })
-      }
-    }
-  })
-  return renkeiList;
-}
-
-function nextRenkei(renkei){
-  var next = new Array();
-  switch(renkei){
-    case "溶解":
-      next[0] = {
-        action:"切断",
-        name:"切断"
-      };
-      next[1] = {
-        action:"衝撃",
-        name:"核熱"
-      };
-      break;
-    case "硬化":
-      next[0] = {
-        action:"衝撃",
-        name:"衝撃"
-      };
-      next[1] = {
-        action:"振動",
-        name:"分解"
-      };
-      break;
-    case "炸裂":
-      next[0] = {
-        action:"切断",
-        name:"切断"
-      };
-      next[1] = {
-        action:"収縮",
-        name:"重力"
-      };
-      break;
-    case "切断":
-      next[0] = {
-        action:"溶解",
-        name:"溶解"
-      };
-      next[1] = {
-        action:"炸裂",
-        name:"炸裂"
-      };
-      next[2] = {
-        action:"振動",
-        name:"振動"
-      };
-      break;
-    case "衝撃":
-      next[0] = {
-        action:"溶解",
-        name:"溶解"
-      };
-      next[1] = {
-        action:"炸裂",
-        name:"炸裂"
-      };
-      break;
-    case "貫通":
-      next[0] = {
-        action:"切断",
-        name:"湾曲"
-      };
-      next[1] = {
-        action:"収縮",
-        name:"収縮"
-      };
-      next[2] = {
-        action:"振動",
-        name:"振動"
-      };
-      break;
-    case "振動":
-      next[0] = {
-        action:"衝撃",
-        name:"衝撃"
-      };
-      next[1] = {
-        action:"硬化",
-        name:"硬化"
-      };
-      break;
-    case "収縮":
-      next[0] = {
-        action:"貫通",
-        name:"貫通"
-      };
-      next[1] = {
-        action:"炸裂",
-        name:"炸裂"
-      };
-      break;
-    case "核熱":
-      next[0] = {
-        action:"分解",
-        name:"光"
-      };
-      next[1] = {
-        action:"重力",
-        name:"重力"
-      };
-      break;
-    case "重力":
-      next[0] = {
-        action:"湾曲",
-        name:"闇"
-      };
-      next[1] = {
-        action:"分解",
-        name:"分解"
-      };
-      break;
-    case "分解":
-      next[0] = {
-        action:"核熱",
-        name:"光"
-      };
-      next[1] = {
-        action:"湾曲",
-        name:"湾曲"
-      };
-      break;
-    case "湾曲":
-      next[0] = {
-        action:"重力",
-        name:"闇"
-      };
-      next[1] = {
-        action:"核熱",
-        name:"核熱"
-      };
-      break;
-    case "光":
-      next[0] = {
-        action:"光",
-        name:"光"
-      };
-      break;
-    case "闇":
-      next[0] = {
-        action:"闇",
-        name:"闇"
-      };
-      break;
-  }
-  return next;
-}
-
-function goalRenkei(renkei){
-  var next = new Array();
-  switch(renkei){
-    case "溶解":
-      next[0] = {
-        action1:"切断",
-        action2:"溶解"
-      };
-      next[1] = {
-        action1:"衝撃",
-        action2:"溶解"
-      };
-      break;
-    case "硬化":
-      next[0] = {
-        action1:"振動",
-        action2:"硬化"
-      };
-      break;
-    case "炸裂":
-      next[0] = {
-        action1:"切断",
-        action2:"炸裂"
-      };
-      next[1] = {
-        action1:"衝撃",
-        action2:"炸裂"
-      };
-      next[2] = {
-        action1:"収縮",
-        action2:"炸裂"
-      };
-      break;
-    case "切断":
-      next[0] = {
-        action1:"炸裂",
-        action2:"切断"
-      };
-      next[1] = {
-        action1:"溶解",
-        action2:"切断"
-      };
-      break;
-    case "衝撃":
-      next[0] = {
-        action1:"硬化",
-        action2:"衝撃"
-      };
-      next[1] = {
-        action1:"振動",
-        action2:"衝撃"
-      };
-      break;
-    case "振動":
-      next[0] = {
-        action1:"貫通",
-        action2:"振動"
-      };
-      next[1] = {
-        action1:"切断",
-        action2:"振動"
-      };
-      break;
-    case "貫通":
-      next[0] = {
-        action1:"収縮",
-        action2:"貫通"
-      };
-      break;
-    case "収縮":
-      next[0] = {
-        action1:"硬化",
-        action2:"収縮"
-      };
-      next[1] = {
-        action1:"貫通",
-        action2:"収縮"
-      };
-      break;
-    case "核熱":
-      next[0] = {
-        action1:"溶解",
-        action2:"衝撃"
-      };
-      next[1] = {
-        action1:"湾曲",
-        action2:"核熱"
-      };
-      break;
-    case "重力":
-      next[0] = {
-        action1:"炸裂",
-        action2:"収縮"
-      };
-      next[1] = {
-        action1:"核熱",
-        action2:"重力"
-      };
-      break;
-    case "分解":
-      next[0] = {
-        action1:"硬化",
-        action2:"振動"
-      };
-      next[1] = {
-        action1:"重力",
-        action2:"分解"
-      };
-      break;
-    case "湾曲":
-      next[0] = {
-        action1:"貫通",
-        action2:"切断"
-      };
-      next[1] = {
-        action1:"分解",
-        action2:"湾曲"
-      };
-      break;
-    case "光":
-      next[0] = {
-        action1:"核熱",
-        action2:"分解"
-      };
-      next[1] = {
-        action1:"分解",
-        action2:"核熱"
-      };
-      next[2] = {
-        action1:"光",
-        action2:"光"
-      };
-      break;
-    case "闇":
-      next[0] = {
-        action1:"湾曲",
-        action2:"重力"
-      };
-      next[1] = {
-        action1:"重力",
-        action2:"湾曲"
-      };
-      next[2] = {
-        action1:"闇",
-        action2:"闇"
-      };
-      break;
-  }
-  return next;
 }
