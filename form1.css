@@ -1,0 +1,61 @@
+body {
+}
+
+h1 {
+	background-color:#00FF7F;
+	text-align:center;
+}
+
+h2 {
+	text-indent: 20px;
+}
+
+.check {
+	height:20px;
+}
+
+#form {
+	position:absolute;
+	left:0px;
+	top:50px;
+	width:10000px;
+}
+
+#text {
+	position:absolute;
+	left:50px;
+	top:60px;
+	font-size:16px;
+	width:100px;
+	text-indent: 10px;
+}
+
+#box {
+	position:absolute;
+	left:170px;
+	top:60px;
+	width:300px;
+	text-indent: 10px;
+}
+.button {
+	width:100px;
+	height:50px;
+	font-size:16px;
+}
+
+#formButton {
+	position:absolute;
+	top:400px;
+	left:50px;
+}
+
+.table1 tr:nth-child(odd) td {  
+  background-color: #EAF6FD;  
+}
+.table1 tr:nth-child(even) td {  
+  background-color: #EFEFEF;  
+}  
+
+.table1 td {
+height: 50px;
+}}

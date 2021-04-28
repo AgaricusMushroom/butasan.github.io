@@ -1,0 +1,45 @@
+body {
+}
+
+h1 {
+	background-color:#00FF7F;
+	text-align:center;
+}
+
+h2 {
+	text-indent: 20px;
+}
+
+#text {
+	text-indent: 30px;
+}
+
+.table {
+	position:relative;
+	left:50px;
+	top:10px;
+}
+
+#b {
+width:200px;
+height: 30px;
+}
+
+#c {
+width:200px;
+height: 30px;
+}
+
+#d {
+width:170px;
+height: 30px;
+}
+
+.table td {
+width:50px;
+height: 30px;
+}
+
+.hyoutext {
+	text-align:right;
+}

@@ -1,0 +1,43 @@
+<html>
+ <head>
+  <title>ポーカー</title>
+ </head>
+ <body background="haikei.jpg" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+  <Div Align="center"><font size="64" color="#ff0000"><b>ＧＡＭＥ　ＯＶＥＲ<br></b></font>
+  <img src="Chika1.jpg" alt="サンプル">
+  <br>
+  <input type="button" name="hit" value="地道にいく" onClick="Button2()">
+  </Div>
+  <script>
+   var navi;
+   var len;
+   var browser;
+   var jflg=0;
+   var i;
+
+   function Button1(){
+    alert("ところがどっこい…\n夢じゃありません…！\n現実です…！\nこれが現実…！");
+   }
+
+   function Button2(){
+    navi = navigator.userAgent;
+    len = navi.length;
+    len = len-4;
+    for(i=0;i<len&&browser!="MSIE 6.0";i++){
+     browser=navi.substr(i, 8);
+    }
+    if(browser=="MSIE 6.0"){
+     jflg=-1;
+    }
+    if(jflg==-1){
+      alert("因果応報…天誅…！\nこれがお前のブラウザの報いだ…っ！\nお使いのブラウザ【Internet Explorer 6】←←←");
+      location.href = "http://windows.microsoft.com/ja-jp/windows/upgrade-your-browser";
+    } else {
+      location.href = "Poker.html";
+    }
+   }
+  </script>
+  <br>
+  <br>
+ </body>
+</html>

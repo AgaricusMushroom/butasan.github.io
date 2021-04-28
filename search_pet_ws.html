@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>ペットWS検索</title>
+</head>
+<body onLoad="defaultArray()">
+	<script type="text/javascript" src="BeastWS.js"></script>
+	<h1 style="text-align:center">ペットWS検索</h1>
+	<h2>検索</h2>
+	<form name="search_form" onChange="createTable()">
+		<table id='searchTable'>
+			<tr>
+				<th>種族</th>
+				<th>スキル名</th>
+				<th>種別</th>
+				<th>属性</th>
+				<th>連携属性</th>
+			</tr>
+			<tr>
+				<th>
+					<select id="shuzoku" name="shuzoku">
+						<option value=""></option>
+						<option value="アクエフ">アクエフ</option>
+						<option value="アプカル">アプカル</option>
+						<option value="アントリオン">アントリオン</option>
+						<option value="ウサギ">ウサギ</option>
+						<option value="エフト">エフト</option>
+						<option value="大羊">大羊</option>
+						<option value="キノコ">キノコ</option>
+						<option value="クラブ">クラブ</option>
+						<option value="剣虎">剣虎</option>
+						<option value="甲虫">甲虫</option>
+						<option value="コリブリ">コリブリ</option>
+						<option value="ジャギル">ジャギル</option>
+						<option value="スナップウィード">スナップウィード</option>
+						<option value="スパイダー">スパイダー</option>
+						<option value="スラッグ">スラッグ</option>
+						<option value="ダイアマイト">ダイアマイト</option>
+						<option value="チャプリ">チャプリ</option>
+						<option value="トゥルフェイア">トゥルフェイア</option>
+						<option value="トカゲ">トカゲ</option>
+						<option value="フライ">フライ</option>
+						<option value="マンドラゴラ">マンドラゴラ</option>
+						<option value="モスキート">モスキート</option>
+						<option value="ラズ">ラズ</option>
+						<option value="ラプトル">ラプトル</option>
+						<option value="レディバグ">レディバグ</option>
+					</select>
+				</th>
+				<th><input type="text" id="skill" size="30" onKeyPress="return submitStop(event)"></th>
+				<th>
+					<select id="shubetu" name="shubetu">
+						<option value=""></option>
+						<option value="物理">物理</option>
+						<option value="魔法">魔法</option>
+						<option value="強化">強化</option>
+						<option value="弱体">弱体</option>
+					</select>
+				</th>
+				<th>
+					<select id="zokusei" name="zokusei">
+						<option value=""></option>
+						<option value="斬">斬</option>
+						<option value="突">突</option>
+						<option value="打">打</option>
+						<option value="格">格</option>
+						<option value="火">火</option>
+						<option value="氷">氷</option>
+						<option value="風">風</option>
+						<option value="土">土</option>
+						<option value="雷">雷</option>
+						<option value="水">水</option>
+						<option value="光">光</option>
+						<option value="闇">闇</option>
+					</select>
+				</th>
+				<th>
+					<select id="renkei" name="renkei">
+						<option value=""></option>
+						<option value="溶解">溶解</option>
+						<option value="硬化">硬化</option>
+						<option value="炸裂">炸裂</option>
+						<option value="切断">切断</option>
+						<option value="衝撃">衝撃</option>
+						<option value="振動">振動</option>
+						<option value="貫通">貫通</option>
+						<option value="収縮">収縮</option>
+						<option value="核熱">核熱</option>
+						<option value="重力">重力</option>
+						<option value="分解">分解</option>
+						<option value="湾曲">湾曲</option>
+						<option value="光">光</option>
+						<option value="闇">闇</option>
+					</select>
+				</th>
+			</tr>
+		</table>
+	</form>
+	<br>
+	<table id='WStable' border>
+		<tr style="text-align:center; background-color:#87CEEB">
+			<th>種族</th>
+			<th>スキル名</th>
+			<th>Charge</th>
+			<th>種別</th>
+			<th>属性</th>
+			<th>連携属性1</th>
+			<th>連携属性2</th>
+			<th>追加効果</th>
+		</tr>
+	</table>
+</body>
+</html>
