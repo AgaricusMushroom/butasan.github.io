@@ -1,0 +1,100 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+  <title>ポーカー</title>
+ </head>
+ <body background="haikei2.jpg" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+  <audio id="BGM1"preload="auto" loop><source src="bgm.ogg"><source src="bgm.mp3"></audio>
+  <audio id="BGM2"preload="auto" loop><source src="bgm2.ogg"><source src="bgm2.mp3"></audio>
+  <audio id="BGM3"preload="auto" loop><source src="bgm3.ogg"><source src="bgm3.mp3"></audio>
+  <audio id="BGM4"preload="auto" loop><source src="bgm4.ogg"><source src="bgm4.mp3"></audio>
+  <audio id="BGM5"preload="auto" loop><source src="bgm5.ogg"><source src="bgm5.mp3"></audio>
+  <audio id="BGM6"preload="auto" loop><source src="bgm6.ogg"><source src="bgm6.mp3"></audio>
+  <Div Align="center">
+  <img src="Poker.gif" alt="ポーカー">
+  </Div>
+  <img id="11"  src="" border="0" alt="" width="150" height="225">
+  <img id="12"  src="" border="0" alt="" width="150" height="225">
+  <img id="13"  src="" border="0" alt="" width="150" height="225">
+  <img id="14"  src="" border="0" alt="" width="150" height="225">
+  <img id="15"  src="" border="0" alt="" width="150" height="225">
+  <HR noshade size="5" color="#ffffff">
+  <img id="1"  src="" border="0" alt="" onClick="Card(1)" width="150" height="225">
+  <img id="2"  src="" border="0" alt="" onClick="Card(2)" width="150" height="225">
+  <img id="3"  src="" border="0" alt="" onClick="Card(3)" width="150" height="225">
+  <img id="4"  src="" border="0" alt="" onClick="Card(4)" width="150" height="225">
+  <img id="5"  src="" border="0" alt="" onClick="Card(5)" width="150" height="225">
+  <br>
+  <SPAN id="ID" STYLE="visibility: hidden; position: fixed;"></SPAN>
+  <input type="button" id="Bid" name="hit" value="ビッド(B)" accesskey="B" onClick="Pid()" onMouseOver="popUp(1)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="ドロー(D)" accesskey="D" onClick="Draw()" onMouseOver="popUp(3)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="ショー・ダウン(S)" accesskey="S" onClick="Show()" onMouseOver="popUp(4)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="フォールド(F)" accesskey="F" onClick="Down()" onMouseOver="popUp(5)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="成立している役のチェック(C)"  accesskey="C" onClick="Check()" onMouseOver="popUp(6)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="昇順ソート(Q)"  accesskey="Q" onClick="Shoujun()" onMouseOver="popUp(7)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="はじめから(N)"  accesskey="N" onClick="NewGame()" onMouseOver="popUp(8)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="ゲームの説明(R)"  accesskey="R" onClick="Rule()" onMouseOver="popUp(9)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <br>
+  <script type="text/javascript" src="poker.js">
+  </script>
+  <br>
+  <form name="tefuda">
+  <font color ="#ffffff">
+  <input type="checkbox" id="dr1" value="one" /><label for="dr1">１枚目</label>
+  <input type="checkbox" id="dr2" value="two" /><label for="dr2">２枚目</label>
+  <input type="checkbox" id="dr3" value="three" /><label for="dr3">３枚目</label>
+  <input type="checkbox" id="dr4" value="four" /><label for="dr4">４枚目</label>
+  <input type="checkbox" id="dr5" value="five" /><label for="dr5">５枚目</label>
+  <input type="checkbox" id="dr6" value="all" onClick="AllChecked();" /><label for="dr6">全てドロー</label>
+  </font>
+  </form>
+  <div><input id="def" type="text" size="20" value="ここに役が表示されます"></div>
+  <br>
+ <font color="#ffffff">手持ちのお金</font>
+ <div><input id="abc" type="text" size="10" value="error"></div>
+<script type="text/javascript"><!--
+document.getElementById('abc').value=money;
+ //--></script>
+   <font color="#ffffff">ハイスコア</font>
+   <div><input id="score" type="text" size="10" value="error"></div>
+<script type="text/javascript"><!--
+document.getElementById("score").value=highscore;
+ //--></script>
+  <br>
+  <form name="sooto">
+  <font color ="#ffffff">
+  <input type="checkbox" id="op1" value="sort" /><label for="op1" id="opp1">自動ソートを有効にする</label>
+  </font>
+  </form>
+  <form name="hint">
+  <font color ="#ffffff">
+  <input type="checkbox" id="op2" value="hint" /><label for="op2" id="opp2">ポップアップヘルプを有効にする</label>
+  </font>
+  </form>
+  <br>
+  <br>
+  <font color="#ffffff">ＢＧＭ</font>
+  <br>
+  <form name="form1" action="onButtonClick();">
+    <select id="Select1"">
+      <option>ＢＧＭ無し</option>
+      <option  selected>ＢＧＭ１</option>
+      <option>ＢＧＭ２</option>
+      <option>ＢＧＭ３</option>
+      <option>ＢＧＭ４</option>
+      <option>ＢＧＭ５</option>
+      <option>ＢＧＭ６</option>
+    </select>
+    <input type="button" value="再生" onclick="onButtonClick();"  style="HEIGHT: 40px"/>
+  </form>
+
+  <a href="Poker3.html">画像縮小版（ＢＧＭ無し）</a>
+  <br>  <a href="index.html">戻る</a>
+  <Div Align="right">
+  <img src="byAgaricus.gif" alt="キノコ">
+  </Div>
+ <br>
+ <br>
+
+ </body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+  <title>ブラックジャック</title>
+ </head>
+ <body background="haikei.jpg" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+  <!-- <Bgsound src="bgm3.mp3" Loop="-1"> -->
+  <audio id="BGM1"preload="auto" loop><source src="bgm.ogg"><source src="bgm.mp3"></audio>
+  <audio id="BGM2"preload="auto" loop><source src="bgm2.ogg"><source src="bgm2.mp3"></audio>
+  <audio id="BGM3"preload="auto" loop><source src="bgm3.ogg"><source src="bgm3.mp3"></audio>
+  <audio id="BGM4"preload="auto" loop><source src="bgm4.ogg"><source src="bgm4.mp3"></audio>
+  <audio id="BGM5"preload="auto" loop><source src="bgm5.ogg"><source src="bgm5.mp3"></audio>
+  <audio id="BGM6"preload="auto" loop><source src="bgm6.ogg"><source src="bgm6.mp3"></audio>
+  <Div Align="center">
+  <img src="BlackJack.gif" alt="ブラックジャック">
+  </Div>
+  <img id="11"  src="z01.png" border="0" alt="" width="150" height="225">
+  <img id="12"  src="z01.png" border="0" alt="" width="150" height="225">
+  <img id="13"  src="" border="0" alt="">
+  <img id="14"  src="" border="0" alt="">
+  <img id="15"  src="" border="0" alt="">
+  <img id="16"  src="" border="0" alt="">
+  <img id="17"  src="" border="0" alt="">
+  <img id="18"  src="" border="0" alt="">
+  <img id="19"  src="" border="0" alt="">
+  <img id="20"  src="" border="0" alt="">
+  <HR noshade size="5" color="#ffffff">
+  <img id="1"  src="z01.png" border="0" alt="" width="150" height="225">
+  <img id="2"  src="z01.png" border="0" alt="" width="150" height="225">
+  <img id="3"  src="" border="0" alt="">
+  <img id="4"  src="" border="0" alt="">
+  <img id="5"  src="" border="0" alt="">
+  <img id="6"  src="" border="0" alt="">
+  <img id="7"  src="" border="0" alt="">
+  <img id="8"  src="" border="0" alt="">
+  <img id="9"  src="" border="0" alt="">
+  <img id="10"  src="" border="0" alt="">
+  <br>
+  <SPAN id="ID" STYLE="visibility: hidden; position: fixed;"></SPAN>
+  <input type="button" name="hit" value="ヒット(H)" accesskey="H" onClick="Button1()" onMouseOver="popUp(1)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="スタンド(S)" accesskey="S" onClick="Button3()" onMouseOver="popUp(2)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="ダブルダウン(D)" accesskey="D" onClick="Button4()" onMouseOver="popUp(3)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="インシュアランス(I)" accesskey="I" onClick="Button8()" onMouseOver="popUp(4)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="stand" value="サレンダー(O)" accesskey="O" onClick="Button9()" onMouseOver="popUp(5)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="手持ちの確認(C)" accesskey="C" onClick="Button2()" onMouseOver="popUp(6)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="はじめから(N)"accesskey="N" onClick="Button5()" onMouseOver="popUp(7)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <input type="button" name="temochi" value="ゲームの説明(R)" accesskey="R" onClick="Button6()" onMouseOver="popUp(8)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <br>
+  <script type="text/javascript" src="blackjack.js">
+  </script>
+  <br>
+  <div><input id="kazu" type="text" size="10" value="あなたの数"></div>
+  <br>
+  <input type="button" name="temochi" value="ビッド(B)" accesskey="B" onClick="Button7()" onMouseOver="popUp(9)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <br>
+  <p><font color ="#ffffff">ビッドをクリックしてゲームスタート！</font></p>
+  <br>
+ <font color="#ffffff">手持ちのお金</font>
+ <div><input id="abc" type="text" size="10" value="error"></div>
+<script type="text/javascript"><!--
+document.getElementById('abc').value=money;
+ //--></script>
+ <font color="#ffffff">ハイスコア</font>
+ <div><input id="score" type="text" size="10" value="error"></div>
+<script type="text/javascript"><!--
+document.getElementById("score").value=highscore;
+ //--></script>
+  <br>
+  <br>
+  <input type="button" id="Bonus" name="temochi" value="ボーナスルールを有効にする" onClick="Tokushu()" onMouseOver="popUp(10)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  <form name="chbox">
+  <font color ="#ffffff">
+  <input type="checkbox" id="t1" style="display:none;" value="Nobust"/><label for="t1" id="tt1" style="display:none;">ノーバスト</label>
+  <input type="checkbox" id="t2" style="display:none;" value="Jackfever"/><label for="t2" id="tt2" style="display:none;">ジャックフィーバー</label>
+  <input type="checkbox" id="t3" style="display:none;" value="Greatsplit"/><label for="t3" id="tt3" style="display:none;">グレートスプリット</label>
+  <input type="checkbox" id="t4" style="display:none;" value="Joker"/><label for="t4" id="tt4" style="display:none;">ジョーカー</label>
+  <input type="checkbox" id="t5" style="display:none;" value="Joker"/><label for="t5" id="tt5" style="display:none;">ハイドカード</label>
+  </font>
+  </form>
+  <input type="button" name="temochi" value="ボーナスルールの説明" onClick="Setumei()" onMouseOver="popUp(11)" onMouseOut="hidePop()" style="HEIGHT: 40px">
+  </form>
+  <br>
+  <br>
+  <form name="hint">
+  <font color ="#ffffff">
+  <input type="checkbox" id="op2" value="hint" /><label for="op2" id="opp2">ポップアップヘルプを有効にする</label>
+  </font>
+  </form>
+  <font color="#ffffff">
+  <p id="rule" style="display:none;">適用中のボーナスルール：</p>
+  </font>
+  <font color="#00ffff">
+  <p id="rule1" style="display:none;">ノーバスト</p>
+  <p id="rule2" style="display:none;">ジャックフィーバー</p>
+  <p id="rule3" style="display:none;">グレートスプリット</p>
+  <p id="rule4" style="display:none;">ジョーカー</p>
+  <p id="rule5" style="display:none;">ハイドカード</p>
+  </font>
+  <br>
+  <br>
+  <font color="#ffffff">ＢＧＭ</font>
+  <br>
+  <form name="form1" action="onButtonClick();">
+    <select id="Select1"">
+      <option>ＢＧＭ無し</option>
+      <option  selected>ＢＧＭ１</option>
+      <option>ＢＧＭ２</option>
+      <option>ＢＧＭ３</option>
+      <option>ＢＧＭ４</option>
+      <option>ＢＧＭ５</option>
+      <option>ＢＧＭ６</option>
+    </select>
+    <input type="button" value="再生" onclick="onButtonClick();"  style="HEIGHT: 40px"/>
+  </form>
+
+  <a href="BJ.html">画像縮小版（ＢＧＭ無し）</a>
+  <br>  <a href="index.html">戻る</a>
+  <Div Align="right">
+  <img src="byAgaricus.gif" alt="キノコ">
+  </Div>
+ <br>
+ <br>
+
+ </body>
+</html>

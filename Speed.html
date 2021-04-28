@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+		<title>スピード</title>
+		<link rel="stylesheet" type="text/css" href="Speed.css" media="all">
+	</head>
+	<body onLoad = "load()" onContextmenu="return false">
+		<script type="text/javascript" src="speed.js"></script>
+		<div class="main" id="main">
+		<img id="senrekiB" src="senrekiB.png">
+		<a id = "senrekiT">戦歴</a>
+		<a id = "senreki"></a>
+		<img id ="dammy" src ="loadback.png" onMousedown="skip()">
+		<img id ="load" src ="load.gif">
+		<img id ="face1" src ="">
+		<img id ="face2" src ="">
+		<img id ="chain" src ="">
+		<img class = "result" id="stop" src="">
+		<a class = "resultT" id="result0"></a>
+		<a class = "resultT" id="result1"></a>
+		<a class = "resultT" id="result2"></a>
+		<a class = "resultT" id="result3"></a>
+		<a class = "resultT" id="result4"></a>
+		<a class = "resultT" id="result5"></a>
+		<a class = "resultT" id="result6"></a>
+		<img class = "result" id="winlose" src="">
+		<img class="card" id="BAleft" src="" onMousedown="BAClick(1)">
+		<img class="card" id="BAright" src="" onMousedown="BAClick(2)">
+		<img class="card" id="deck1" name="deck1" src="" onMousedown="clicktalon()">
+		<img class="card" id="deck2" name="deck2" src="">
+		<img class="card" id="deckM1" name="deckM1">
+		<img class="card" id="deckM2" name="deckM2">
+		<img class="card" id="img1" name="img1" src="" onMousedown="dragOn(1)">
+		<img class="card" id="img2" name="img2" src="" onMousedown="dragOn(2)">
+		<img class="card" id="img3" name="img3" src="" onMousedown="dragOn(3)">
+		<img class="card" id="img4" name="img4" src="" onMousedown="dragOn(4)">
+		<img class="card" id="img5" name="img5" src="" onMousedown="intercept(5)">
+		<img class="card" id="img6" name="img6" src="" onMousedown="intercept(6)">
+		<img class="card" id="img7" name="img7" src="" onMousedown="intercept(7)">
+		<img class="card" id="img8" name="img8" src="" onMousedown="intercept(8)">
+		<img id="reload" name="reload" src="">
+		<img id="ready" src="count4.png">
+		<img id="title" name="title" src="THESPEED.gif">
+		<img id="agaricus" name="agaricus" src="byAgaricus.gif">
+		<span id="myRem"></span>
+		<span id="enRem"></span>
+		<img id="select" name="select" src="" onMousedown="clickSelect()">
+		<input type="button" id ="easy" value="レベル１" onClick="arrayset(1)">
+		<input type="button" id ="normal" value="レベル２" onClick="arrayset(2)">
+		<input type="button" id ="hard" value="レベル３" onClick="arrayset(3)">
+		<input type="button" id ="savage" value="レベル４" onClick="arrayset(4)">
+		<input type="button" id ="savage2" value="レベル５" onClick="arrayset(5)">
+		<input type="button" id ="savage3" value="レベル６" onClick="arrayset(6)">
+		<img id ="typeback" src="kanban.png">
+		<a id="optext">設定</a>
+		<img id ="type" src="type1.png" onClick="typeChange()">
+		<img id ="typelead" src="lead11.png" onClick="leadChange()">
+		<img id ="typevolume" src="bgmse1.png" onClick="volumeChange()">
+		</div>
+		<!-- レイアウトがうまくいかないぞ -->
+		<div id="update">
+		<p>現在のバージョン：Ver1.8</p>
+		<!-- <p><a href ="index.html">戻る</a></p> -->
+		<p>試験的に製作中の<a href="Speed2.html">スマホ用サイズ</a>（広告がうざすぎる）
+		<p>～難易度について～</p>
+		レベル１：イージーモードです。相手がカードを出すのが非常に遅いため、簡単に潰す事が出来ます。<br>
+		レベル２：ノーマルモードです。このゲームの想定レベルです。<br>
+		レベル３：ハードモードです。大きくは変わりませんが、ノーマルよりも少し難しくなっています。<br>
+		レベル４：ベリーハードモードです。ここから別格。<br>
+		レベル５：エクストリームモードです。クリア出来たら凄い（小並感）<br>
+		<p>～リザルトについてちょこっと解説～</p>
+		平均セット時間：カードを選択してから台札に乗せるまでの平均時間です。乗せられなかった場合はカウントされません。<br>
+		平均判断時間：カードを台札に出せる状態になってから、そのカードを選択するまでの時間です。<br>
+		（※：平均判断時間はあんまり正確じゃないのでアテにしないでね＞＜）<br>
+		<br>
+		<br>
+		<p>更新履歴</p>
+		<p>
+		2015/10/23 Ver0.5<br>
+		・とりあえず形作った。ドラッグで移動、場に重ねると書き換え。<br>
+		<br>
+		2015/10/24 Ver1.0<br>
+		・とりあえず勝負出来るようにした。アニメーションとかは後日。現状敵が強すぎるっていうｗ<br>
+		<br>
+		2015/10/25 Ver1.1<br>
+		・敵の動きにアニメーションつけてみた。若干座標ズレるけどまあ概ね良好？難易度もいい感じに抑えられたはず。<br>
+		・クリックでやるバージョンも入れてみたけど何か変。<br>
+		・背景画像入れたり、座標のズレ直したりした。クリックバージョンは黒歴史にしたい。<br>
+		<br>
+		2015/10/26 Ver1.2<br>
+		・カードが重なってる時の表示をいじって違和感無くした…はず。<br>
+		・アラートを完全に消し去ってリザルト画面を作ってみた。時間はあんまり正確じゃないかも。<br>
+		<br>
+		2015/10/27 Ver1.3<br>
+		・戦歴が保存されるようにしてみた。ただ最初の表示は読み込み完了に時間かかる。<br>
+		（９９９敗とか９９９分超えるとオーバーフローしちゃう＞＜）<br>
+		<br>
+		2015/10/28 Ver1.4<br>
+		・判断処理を改善した。変更点は以下の通り。<br>
+		　判断周期：難易度関係なく一律10msに変更<br>
+		　相手の判断時間：判断周期とは別の数値で管理するようにした。少し遅くなったはず。また、相手が出そうと考えていた物をこちらが潰した場合、相手の判断時間がリセットされるようになった。<br>
+		　相手のドロー速度：従来の４分の３に短縮<br>
+		　仕切り直しの判定：難易度関係なく一律500ms後に仕切り直しに変更<br>
+		・判断処理の改善に伴い、ＣＯＭの強さも一部調整。Lv1とLv3が強化され、Lv4とLv5が弱体された。<br>
+		・リザルトちょっと見やすくなったかも。<br>
+		<br>
+		2015/10/29 Ver1.5<br>
+		・仕切り直しの際に、ＣＯＭがカードを出すのを難易度関係無く一律200ms遅らせた。<br>
+		・Ｒｅａｄｙ．．の文字が消える事があるのを修正した気がする。<br>
+		・スマホ用にviewportいじったやつを入れてみた。（試験的に）機種依存するかな？<br>
+		・相手が出せない状態かつ自分が出せる状態で１秒経過すると、出せるカードを示すようにした。<br>
+		・カード選択タイプがクリックの時、選択したカードを再度クリックすると、選択解除出来るようにした。<br>
+		・以下の不具合を修正<br>
+		　平均判断時間がスタートのカウントダウン中にも計測されていた。<br>
+		　リザルト表示中に素早く連打してタイトルに戻ると、タイトル画面でリザルトが流れる。<br>
+		　範囲選択や２回タッチなどするとカードが選択出来なくなってしまう。<br>
+		<br>
+		2015/10/30 Ver1.6<br>
+		・自分だけが出せるときにカードが示されない場合がある不具合を修正した。<br>
+		・最初にロード画面をつけてみた。<br>
+		・カード選択タイプを保存するようにした。<br>
+		・右クリックを無効にした。<br>
+		・難易度を公平にするため、カード選択がクリックの時のインターセプト出来る範囲を拡大した。<br>
+		・クリックした時の枠とかを太くした。<br>
+		・リザルトに総合ランクを追加してみた。前述の４つを使っているが、更にもう１つ隠し数値を使っていたり。（何か分かるかな？＾ｑ＾）最高ランクはＳＳＳです。<br>
+		<br>
+		2015/11/1 Ver1.7<br>
+		・こちらがカードを出した直後にＣＯＭが上に重ねてくる不具合を修正した。<br>
+		<br>
+		2016/2/12 Ver1.8<br>
+		・設定項目を１つ追加した。<br>
+		・ＢＧＭとＳＥが鳴るようになった。<br>
+		・仕切り直しの際の座標ズレを修正した。<br>
+		・仕切り直しの際にドラッグを無効化・解除するようにした。<br>
+		<br>
+		2016/4/9 Ver1.9<br>
+		・Lv6を追加した。<br>
+		・ＡＩレベルが導入された。相手のレベルに応じて判断アルゴリズムが追加される。<br>
+		　Lv1～Lv3：ＡＩレベル１。従来と同様。<br>
+		　Lv4～Lv5：ＡＩレベル２。積極的にインターセプトを狙うようになる。<br>
+		　Lv6：ＡＩレベル３。レベル２に加え、自分が出した後に相手に出させない出し方をする。<br>
+		　（例：場札が４、７　プレイヤーの手札が２、９、Ｊ、Ｋ　ＣＯＭの手札が３、５、Ｑ、Ａの際に、３ではなく５を出す）<br>
+		</p>
+		</div>
+	</body>
+	<!--
+		学校の課題でタイマー習ったからやってみただけ。
+		このゲームの作者：レッドプール佐野（嘘）
+	-->
+	<!-- 
+		今後の拡張予定とかメモとか
+		・リザルトの時間の計測をもっと正確にしたい
+		・デザインもっとかっこよくしたい
+		・ＤＯＭ使うと軽くなるらしい？よく分からん
+		・平均判断時間がおかしくなるバグが学校で確認されたが、再現出来ない。学校が重すぎる？
+	-->
+</html>
