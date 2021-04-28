@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+		<meta name="viewport" content="width=700,initial-scale=0.5,user-scalable=no,minimum-scale=0.5,maximum-scale=0.5">
+		<title>スピード</title>
+		<link rel="stylesheet" type="text/css" href="Speed3.css" media="all">
+	</head>
+	<body onLoad = "load()" onContextmenu="return false">
+		<script type="text/javascript" src="speed2.js"></script>
+		<div class="main" id="main">
+		<img id="senrekiB" src="senrekiB.png">
+		<a id = "senrekiT">戦歴</a>
+		<a id = "senreki"></a>
+		<img id ="dammy" src ="loadback.png" onMousedown="skip()">
+		<img id ="load" src ="load.gif">
+		<img id ="face1" src ="">
+		<img id ="face2" src ="">
+		<img id ="chain" src ="">
+		<img class = "result" id="stop" src="">
+		<a class = "resultT" id="result0"></a>
+		<a class = "resultT" id="result1"></a>
+		<a class = "resultT" id="result2"></a>
+		<a class = "resultT" id="result3"></a>
+		<a class = "resultT" id="result4"></a>
+		<a class = "resultT" id="result5"></a>
+		<a class = "resultT" id="result6"></a>
+		<img class = "result" id="winlose" src="">
+		<img class="card" id="BAleft" src="" onMousedown="BAClick(1)">
+		<img class="card" id="BAright" src="" onMousedown="BAClick(2)">
+		<img class="card" id="deck1" name="deck1" src="" onMousedown="clicktalon()">
+		<img class="card" id="deck2" name="deck2" src="">
+		<img class="card" id="deckM1" name="deckM1">
+		<img class="card" id="deckM2" name="deckM2">
+		<img class="card" id="img1" name="img1" src="" onMousedown="dragOn(1)">
+		<img class="card" id="img2" name="img2" src="" onMousedown="dragOn(2)">
+		<img class="card" id="img3" name="img3" src="" onMousedown="dragOn(3)">
+		<img class="card" id="img4" name="img4" src="" onMousedown="dragOn(4)">
+		<img class="card" id="img5" name="img5" src="" onMousedown="intercept(5)">
+		<img class="card" id="img6" name="img6" src="" onMousedown="intercept(6)">
+		<img class="card" id="img7" name="img7" src="" onMousedown="intercept(7)">
+		<img class="card" id="img8" name="img8" src="" onMousedown="intercept(8)">
+		<img id="reload" name="reload" src="">
+		<img id="ready" src="count4.png">
+		<img id="title" name="title" src="THESPEED.gif">
+		<img id="agaricus" name="agaricus" src="byAgaricus.gif">
+		<span id="myRem"></span>
+		<span id="enRem"></span>
+		<img id="select" name="select" src="" onMousedown="clickSelect()">
+		<input type="button" id ="easy" value="レベル１" onClick="arrayset(1)">
+		<input type="button" id ="normal" value="レベル２" onClick="arrayset(2)">
+		<input type="button" id ="hard" value="レベル３" onClick="arrayset(3)">
+		<input type="button" id ="savage" value="レベル４" onClick="arrayset(4)">
+		<input type="button" id ="savage2" value="レベル５" onClick="arrayset(5)">
+		<img id ="typeback" src="kanban.png">
+		<a id="optext">設定</a>
+		<img id ="type" src="type1.png" onClick="typeChange()">
+		<img id ="typelead" src="lead11.png" onClick="leadChange()">
+		</div>
+	</body>
+	<!--
+		学校の課題でタイマー習ったからやってみただけ。
+		このゲームの作者：レッドプール佐野（嘘）
+	-->
+</html>

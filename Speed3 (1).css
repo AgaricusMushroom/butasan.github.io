@@ -1,0 +1,347 @@
+body { 
+	background-image: url("spback.jpg");
+}
+
+span {
+	color : #ffffff;
+	font-size: 30px;
+}
+
+a {
+	font-size: 20px;
+}
+
+#dammy {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:700px;
+	height:600px;
+	z-index:20;
+}
+
+#load {
+	position:absolute;
+	left:334px;
+	top:334px;
+	z-index:25;
+}
+
+.result {
+	position:absolute;
+	left:701px;
+	top:0px;
+}
+
+.resultT {
+	position:absolute;
+	color : #000000;
+	background-color : #ffffff;
+	font-size: 40px;
+	left:701px;
+	width:700px;
+	top:0px;
+}
+
+#result0 {
+	color : #ff0000;
+	background-color : #ffff00;
+	text-align: center;
+	font-size: 60px;
+}
+
+#result5 {
+	text-align: center;
+	color : #ffffff;
+	background-color : transparent;
+}
+
+#myRem {
+	position:absolute;
+	left:15px;
+	top:365px;
+	z-index:10;
+}
+
+#enRem {
+	position:absolute;
+	left:575px;
+	top:170px;
+	z-index:10;
+}
+
+.main {
+	position: relative;
+	background-color: #ffffff;
+	border: medium solid #000000;
+	background-image: url("spgmback.jpg");
+	overflow: hidden;
+	margin: 0 auto;
+	width:700px;
+	height:600px;
+}
+
+#title {
+	position: absolute;
+	left:161px;
+	top:41px;
+}
+
+#agaricus {
+	position: absolute;
+	left:439px;
+	top:503px;
+}
+
+.card {
+	position:absolute;
+	width:100px;
+	height:150px;
+	display:none;
+}
+
+#deck1 {
+	position:absolute;
+	left:20px;
+	top:430px;
+}
+
+#deck2 {
+	position:absolute;
+	left:580px;
+	top:20px;
+}
+
+#face1 {
+	position:absolute;
+	left:22px;
+	top:265px;
+	display:none;
+}
+
+#face2 {
+	position:absolute;
+	left:582px;
+	top:265px;
+	display:none;
+}
+
+#chain {
+	position:absolute;
+	left:225px;
+	top:101px;
+	display:none;
+	z-index:20;
+}
+
+#deckM1 {
+	position:absolute;
+	left:-200px;
+	top:430px;
+	z-index:10;
+}
+
+#deckM2 {
+	position:absolute;
+	left:-580px;
+	top:20px;
+	z-index:10;
+}
+
+#img1 {
+	position:absolute;
+	left:190px;
+	top:430px;
+}
+
+#img2 {
+	position:absolute;
+	left:310px;
+	top:430px;
+}
+
+#img3 {
+	position:absolute;
+	left:430px;
+	top:430px;
+}
+
+#img4 {
+	position:absolute;
+	left:550px;
+	top:430px;
+}
+
+#img5 {
+	position:absolute;
+	left:410px;
+	top:20px;
+}
+
+#img6 {
+	position:absolute;
+	left:290px;
+	top:20px;
+}
+
+#img7 {
+	position:absolute;
+	left:170px;
+	top:20px;
+}
+
+#img8 {
+	position:absolute;
+	left:50px;
+	top:20px;
+}
+
+#reload {
+	position:absolute;
+	left:-100px;
+	top:448px;
+	z-index:10;
+}
+#select {
+	position:absolute;
+	left:-100px;
+	top:448px;
+}
+
+#BAleft {
+	position:absolute;
+	left:200px;
+	top:225px;
+}
+
+#BAright {
+	position:absolute;
+	left:400px;
+	top:225px;
+}
+
+#update {
+	padding: 50px 0 0 0;
+}
+
+#easy {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:160px;
+	display:none;
+}
+
+#normal {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:220px;
+	display:none;
+}
+
+#hard {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:280px;
+	display:none;
+}
+
+#savage {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:340px;
+	display:none;
+}
+
+#savage2 {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:400px;
+	display:none;
+}
+
+#savage3 {
+	position:absolute;
+	width:100px;
+	height:50px;
+	left:300px;
+	top:460px;
+	display:none;
+}
+
+#typeback {
+	position:absolute;
+	left:6px;
+	top:220px;
+	width:230px;
+	height:380px;
+}
+
+#optext {
+	position:absolute;
+	color : #00ffff;
+	font-size: 30px;
+	left:6px;
+	top:240px;
+	width:230px;
+	text-align: center;
+}
+
+#type {
+	position:absolute;
+	left:20px;
+	top:480px;
+}
+
+#typelead {
+	position:absolute;
+	left:20px;
+	top:380px;
+}
+
+#typevolume {
+	position:absolute;
+	left:20px;
+	top:280px;
+}
+
+#senrekiB {
+	position:absolute;
+	left:486.5px;
+	top:120px;
+	display : none;
+}
+
+
+#senrekiT {
+	position:absolute;
+	left:500px;
+	top:200px;
+	width:185px;
+	text-align: center;
+	display : none;
+}
+
+#senreki {
+	font-size: 16px;
+	position:absolute;
+	left:500px;
+	top:230px;
+	width:200px;
+	display : none;
+}
+
+#ready {
+	position:absolute;
+	left:701px;
+	top:255px;
+}

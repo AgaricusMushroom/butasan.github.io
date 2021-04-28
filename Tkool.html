@@ -1,0 +1,111 @@
+<html>
+	<head>
+	<title>ＳＱＬツクール</title>
+	<link rel="stylesheet" type="text/css" href="Tkool.css" media="all">
+		<body>
+		<script type="text/javascript" src="Tkool.js"></script>
+			<h1>ＳＱＬツクール　Ｖｅｒ．１．４</h1>
+			<form name="sqlform">
+			<span class="text">テーブル</span><br>
+			<div class="radio1">
+			<label>
+			<input type="radio"name="table" id = "ip" value="ip">IP
+			</label>
+			<label>
+			<input type="radio" name="table" id = "fe" value="fe">FE
+			</label>
+			<label>
+			<input type="radio" name="table" id = "ap" value="ap">AP
+			</label>
+			</div>
+			<br><br>
+			<span class="text">ID</span><br>
+			<input type="text" name="id" id="id" value="" size="5" maxlength="5">
+			<br><br>
+			<span class="text">問題文</span><br>
+			<textarea name="question" id="question" cols="50" rows="10"></textarea>
+			<br><br>
+			<span class="text">分類</span><br>
+			<div class="radio2">
+			<label>
+			<input type="radio" name="classification" id = "tc" value="テクノロジ">テクノロジ
+			</label>
+			<label>
+			<input type="radio" name="classification" id = "st" value="ストラテジ">ストラテジ
+			</label>
+			<label>
+			<input type="radio" name="classification" id = "mn" value="マネジメント">マネジメント
+			</label>
+			<label>
+			<input type="radio" name="classification" id = "res" value="error" onClick="radioReset()">選択を解除
+			</label>
+			</div>
+			<br><br>
+			<span class="text">答え</span><br>
+			<textarea name="answer" id="answer" cols="50" rows="2"></textarea>
+			<br><br>
+			<span class="text">ハズレ１</span><br>
+			<textarea name="miss1" id="miss1" cols="50" rows="2"></textarea>
+			<br><br>
+			<span class="text">ハズレ２</span><br>
+			<textarea name="miss2" id="miss2" cols="50" rows="2"></textarea>
+			<br><br>
+			<span class="text">ハズレ３</span><br>
+			<textarea name="miss3" id="miss3" cols="50" rows="2"></textarea>
+			<br><br>
+			<span class="text">解説</span><br>
+			<textarea name="explanation" id="explanation" cols="50" rows="10"></textarea>
+			<br><br>
+			<input type="button" id="done" accesskey = "P" value="貼り付け(P)" onClick="paste()">
+			<input type="button" id="change" accesskey = "S" value="SQL文に変換(S)" onClick="create()">
+			<input type="button" id="query" accesskey = "Q" value="SQL文を選択(Q)" onClick="onSql()">
+			<input type="button" id="remove" accesskey = "R" value="連続入力の取り消し(R)" onClick="deleteLog()">
+			<br><br>
+			<span id="display">
+			<div class="radio3">
+			<label>
+			<input type="radio"name="sqltype" id = "insert" value="ip">INSERT
+			</label>
+			<label>
+			<br><input type="radio" name="sqltype" id = "update" value="fe">UPDATE*
+			</label>
+			　【<select name="where" id="select_where" size="1" onChange="selectChange()">
+			<option id="si" value="id">ＩＤ</option>
+			<option id="sq" value="question">問題文</option>
+			<option id="sc" value="classification">分類</option>
+			<option id="sa" value="answer">答え</option>
+			<option id="sm1" value="miss1">ハズレ１</option>
+			<option id="sm2" value="miss2">ハズレ２</option>
+			<option id="sm3" value="miss3">ハズレ３</option>
+			<option id="se" value="explanation">解説</option>
+			</select>
+			が<br>
+			<label>
+			<input type="radio" name="sqltype" id = "delete" value="fe">DELETE*
+			</label>
+			　　<input type="text" name="id2" id="id2" value="" size="20">
+			<select name="classificationvalue" id="classificationvalue" size="1">
+			<option value="テクノロジ">テクノロジ</option>
+			<option value="ストラテジ">ストラテジ</option>
+			<option value="マネジメント">マネジメント</option>
+			</select>
+			のレコード】
+			</div>
+			<br>
+			<span class="text">作成されたＳＱＬ文</span><br>
+			<textarea name="sql" id="sql" cols="70" rows="45" onClick="TextAreaSelect()" onMouseout="resetFlg()" readonly></textarea>
+			</span>
+			</form>
+			<span class="text">～注意点など～<br><br>
+			・IEだと挙動がちょっと変。Chromeでは普通に動いた。ローカルだとIEでも動くのに何故だ。<br><br>
+			・Alt+Pで空欄にクリップボード貼り付けが出来ます。（ＩＥのみ。他のブラウザよく分からん）<br><br>
+			・Alt+SでSQL文に変換が出来ます。<br><br>
+			・Alt+RでINSERT文の連続入力を取り消します。<br><br>
+			・*がついてあるコマンドを使用する際は、右にあるレコード指定も入力してください。<br><br>
+			・IDは変換すると自動で＋１されるので、一度入力した後はそのまま連続して使用出来ます。<br><br>
+			・INSERTの場合、解説以外は全て入力必須です。<br><br>
+			・改行コードはまだ考慮されてないので、挙動はよく分かりません。暫定的に、「\r\n」という文字に置換しています。<br><br>
+			・何か要望あればよろしく。
+		</body>
+	</head>
+</html>

@@ -1,0 +1,63 @@
+body{
+	background-image: url("tkoolbg.png");
+}
+
+#display{
+	position:absolute;
+	left:550px;
+	top:211.5px;
+}
+
+.radio1{
+	padding:5px;
+	background:#B3C5D9;
+	margin:10px 0px 0px 0px;
+	height:20px;
+	width:170px;
+	border-color:#2B609C;
+	border-width:0 0 3px 0;
+	border-style:solid;
+}
+
+.radio2{
+	padding:5px;
+	background:#B3C5D9;
+	margin:10px 0px 0px 0px;
+	height:20px;
+	width:450px;
+	border-color:#2B609C;
+	border-width:0 0 3px 0;
+	border-style:solid;
+}
+
+.radio3{
+	padding:5px;
+	background:#B3C5D9;
+	margin:10px 0px 0px 0px;
+	height:60px;
+	width:400px;
+	border-color:#2B609C;
+	border-width:0 0 3px 0;
+	border-style:solid;
+}
+
+.text{
+	padding:5px;
+	border-color:#009900;
+	border-width:1px;
+	border-style:solid;
+	background:#ADFEAD;
+}
+
+h1{
+	text-align:center;
+	padding:5px;
+	background:#FFD700;
+	border-color:#FFA500;
+	border-width:0 0 0 3px;
+	border-style:solid;
+}
+
+#classificationvalue{
+	display:none;
+}
