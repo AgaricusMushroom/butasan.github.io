@@ -1,0 +1,14 @@
+Image generation record
+Tool: built-in image_gen (not CLI)
+Asset: anime-cast.png
+Usage: anime portrait sheet; three panels used for Hina, Tsumugi and Mio via CSS.
+
+Final prompt:
+Create one polished Japanese anime visual novel character portrait sheet for a mahjong game. Landscape canvas exactly three equal width vertical panels, no borders and no text. Each panel contains ONE different cute adult woman age 22, bust portrait facing viewer, face centered horizontally within its own third, head same size and same height across all three, entire hair fits in its panel. High quality detailed anime illustration, expressive large eyes, delicate linework, sophisticated cel shading, luminous hair, charming natural expressions, tasteful fully clothed. Left: Hina warm chestnut brown long twin-tail hair, amber eyes, little cherry blossom hair ornament, coral pink cardigan over cream blouse, cheerful open smile, peach background. Middle: Tsumugi dark teal long straight hair, green eyes, gold hairpins, sage green kimono-inspired blouse, gentle composed smile, pale sage background. Right: Mio long lavender hair with a dark purple ribbon, violet eyes, lilac high-neck blouse, confident playful smile, pale lavender background. Consistent commercial anime game illustration style, no chibi, no vector graphics, no photorealism. Beautiful subtle petals and soft light, clean unobtrusive backgrounds. Three portraits must stay entirely within respective thirds for use as a CSS sprite sheet.
+
+Expression sheet update
+Tool: built-in image_gen (reference edit)
+Reference: anime-cast.png
+Saved asset: anime-expressions.png
+Final prompt:
+Create a facial expression sprite sheet for these exact three adult anime women. Preserve their identities, hairstyles, outfits, palettes and high-quality anime art. Layout EXACTLY 3 equal columns and 2 equal rows, six rectangular panels, no borders, text or labels. EACH PANEL has same framing as a single panel of reference: bust portrait with full head, centered face, pastel backdrop. Column 1 chestnut-haired Hina pink cardigan and blossom hair accessory; column 2 dark teal-haired Tsumugi sage kimono blouse; column 3 lavender-haired Mio lilac blouse and purple ribbon. TOP ROW: all three slightly smug/proud/confident expressions for declaring riichi: Hina playful self-satisfied smile, Tsumugi subtly proud elegant smile, Mio knowing smirk. BOTTOM ROW: same three women visibly worried/flustered about losing points: nervous eyebrows, anxious mouth, small anime sweat drops, Hina worried awkward smile, Tsumugi concerned composed face, Mio flustered embarrassed frown. Strongly readable facial emotion but tasteful. Exact aligned 3 by 2 grid, each head fully inside its panel, matching sizes and eye heights across columns. No additional people, no text. Keep consistent illustration quality with reference.
