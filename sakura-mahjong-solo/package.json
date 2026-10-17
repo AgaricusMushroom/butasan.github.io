@@ -1,0 +1,1 @@
+{"name":"sakura-mahjong-solo","version":"0.1.0","private":true,"description":"One human and three CPU Mahjong browser prototype","scripts":{"start":"node server.cjs","test":"node test-server.cjs"},"engines":{"node":">=20"}}

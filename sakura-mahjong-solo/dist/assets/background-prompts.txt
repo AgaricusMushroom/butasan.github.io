@@ -1,0 +1,10 @@
+Built-in image_gen background edits. Saved assets: heide-expressions.png, lapis-expressions.png, circe-expressions.png.
+
+heide
+Use case: precise-object-edit. Edit target: the supplied three-panel expression sprite sheet. Change ONLY the plain background behind the character in all three panels to charcoal black with subtle thin dark silver diamond lattice. Simple elegant repeating pattern, low contrast, unobtrusive, no text. Keep EVERY character face, facial expression, pose, hair, clothing, accessory, lighting, scale, position, image dimensions and equal three-column layout unchanged. Preserve all three original expressions exactly. The pattern must only be in the background and never cover the character. No borders or gutters.
+
+lapis
+Use case: precise-object-edit. Edit target: the supplied three-panel expression sprite sheet. Change ONLY the plain background behind the character in all three panels to rich medium blue with small subtle lighter blue stars. Simple elegant repeating pattern, low contrast, unobtrusive, no text. Keep EVERY character face, facial expression, pose, hair, clothing, accessory, lighting, scale, position, image dimensions and equal three-column layout unchanged. Preserve all three original expressions exactly. The pattern must only be in the background and never cover the character. No borders or gutters.
+
+circe
+Use case: precise-object-edit. Edit target: the supplied three-panel expression sprite sheet. Change ONLY the plain background behind the character in all three panels to deep purple with understated thin lavender circles and crescent moons. Simple elegant repeating pattern, low contrast, unobtrusive, no text. Keep EVERY character face, facial expression, pose, hair, clothing, accessory, lighting, scale, position, image dimensions and equal three-column layout unchanged. Preserve all three original expressions exactly. The pattern must only be in the background and never cover the character. No borders or gutters.
