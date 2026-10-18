@@ -54,3 +54,12 @@ body>header{height:42px;min-height:42px}.game-top{min-height:25px}#game{padding:
 .team-mode-choice{display:block;margin:10px 0;font-size:13px}.team-mode-choice input{accent-color:#476e59}.team-score{font-size:12px;text-align:center;padding:4px;color:#355d50}.team-score[hidden]{display:none}.team-badge{font-size:10px;border-radius:10px;padding:2px 7px;background:#eee2ef;color:#735277}.team-badge.ally{background:#d8eadb;color:#315e43}.team-result{display:grid;gap:5px;margin:16px 0;padding:14px;background:#eaf0e6;border-radius:12px}.team-result b{font-size:24px}.team-result small{color:#637061}
 
 .ability-status{font-size:11px;text-align:center;color:#80512d;padding:2px 4px;background:#fff1d9;border-radius:6px}.ability-status[hidden]{display:none}.tile.big.ability-danger{outline:3px solid #e42b46;outline-offset:1px;border-color:#d11630;box-shadow:0 0 9px #e42b4680}.tile.big.ability-danger::after{content:"!";position:absolute;top:-7px;left:-3px;background:#c41c35;color:white;border-radius:50%;width:14px;height:14px;font-size:10px;line-height:14px;z-index:3}
+.anime-portrait.new-cast.cast-4{background-image:url('assets/nyx-expressions.png')}
+.anime-portrait.new-cast.cast-5{background-image:url('assets/felicia-expressions.png')}
+.cutin-scene.cast-4{background:linear-gradient(125deg,#f6de86,#fffbed)}
+.cutin-scene.cast-5{background:linear-gradient(125deg,#aab0bd,#f2f3f6)}
+#cast-selection-status{font-size:12px;color:#637562;margin:8px 0}
+.selectable-cast .character{width:100%;height:100px;min-height:0;margin-bottom:8px;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;position:relative;opacity:.65;border:2px solid transparent}
+.selectable-cast .character.chosen{opacity:1;border-color:#698c73}
+.selectable-cast .character:hover{opacity:1}.selectable-cast .portrait{width:100px;min-width:100px;height:100px}.selectable-cast .details{padding:9px 14px}.selectable-cast h3{font-size:19px;margin:3px 0}.selectable-cast .details p{font-size:10px;margin:3px 0}.selectable-cast .choice-mark{position:absolute;right:10px;top:8px;color:#476a52;font-size:20px}.selectable-cast .character:nth-child(4){background:#fbf0c5}.selectable-cast .character:nth-child(5){background:#e3e5eb}
+#lobby .selectable-cast .character{height:100px;margin-top:8px}#lobby .selectable-cast .portrait{width:100px;height:100%;min-width:100px}

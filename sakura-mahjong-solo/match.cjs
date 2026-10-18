@@ -2,8 +2,9 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 function createMatch(roster,mode){let timer=null,version=1,closed=false;const el=()=>({hidden:false,innerHTML:'',classList:{add(){},remove(){},toggle(){}},setAttribute(){},addEventListener(){},querySelectorAll:()=>[],insertAdjacentElement(){},remove(){},showModal(){},close(){}});const elements=new Map();const doc={querySelector:s=>{if(!elements.has(s))elements.set(s,el());return elements.get(s)},querySelectorAll:()=>[],addEventListener(){},createElement:el};
 const schedule=(fn,ms)=>{clearTimeout(timer);timer=setTimeout(()=>{if(closed)return;try{fn();version++}catch(e){console.error('Match timer:',e);closed=true}},ms);timer.unref?.()};
 const sandbox={console,document:doc,window:{scrollTo(){},addEventListener(){}},localStorage:{getItem:()=>null,setItem(){}},setTimeout:(fn,ms)=>{schedule(fn,ms);return 1},clearTimeout:()=>clearTimeout(timer),roster:JSON.parse(JSON.stringify(roster)),matchMode:mode,hostSchedule:schedule};vm.createContext(sandbox);
-for(const f of ['engine.js','台詞.js','app.js','calls.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'dist',f),'utf8'),sandbox,{filename:f});
+for(const f of ['engine.js','台詞.js','app.js','calls.js','character-ai.js'])vm.runInContext(fs.readFileSync(path.join(__dirname,'dist',f),'utf8'),sandbox,{filename:f});
 vm.runInContext(fs.readFileSync(path.join(__dirname,'dist','feedback.js'),'utf8').split(/\r?\n/).filter(line=>/^function (nagashiWinners|settleNagashi)\(/.test(line)).join('\n'),sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname,'match-adapter.js'),'utf8'),sandbox);
 return {state(seat){return JSON.parse(JSON.stringify({...sandbox.networkState(seat),version}))},action(seat,body){if(closed)throw Error('対局は終了しました');if(body.version!==version)throw Error('画面が更新されました。もう一度操作してください');sandbox.networkAction(seat,JSON.parse(JSON.stringify(body)));version++;},close(){closed=true;clearTimeout(timer)},debug:sandbox};}
 module.exports={createMatch};
+
